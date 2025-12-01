@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    
+    <!-- Package Information -->
+    <PackageId>Unique.BloomFilter</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>Unique Bloom Filter</Title>
+    <Description>A high-performance .NET library implementing Bloom filters with modern C# features and memory optimizations using Span&lt;T&gt;</Description>
+    <Authors>Thomas</Authors>
+    <Copyright>© 2024 Thomas</Copyright>
+    <PackageTags>bloomfilter;probabilistic;datastructure;performance;span;memory;csharp</PackageTags>
+    <PackageProjectUrl>https://github.com/thomas/unique-bloomfilter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thomas/unique-bloomfilter</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release with basic Bloom filter and counting variant implementations.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>true</Optimize>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
